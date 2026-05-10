@@ -86,7 +86,7 @@ export default function OrderTrackingPage() {
     const token = localStorage.getItem("access_token")
     if (!token) return
 
-    const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:5000"
+    const SOCKET_URL = 'https://munchrun-backend.onrender.com'
     const socket = io(SOCKET_URL)
 
     socket.on("connect", () => {
